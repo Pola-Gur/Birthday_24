@@ -34,6 +34,31 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      var formData = new FormData(e.target);
+      var data = {};
+      formData.forEach((value, key) => { data[key] = value });
+      
+      fetch('https://script.google.com/macros/s/AKfycbwI8uCiU5ZZ1N3WdjghgK4RzQnPr6uHVI9vCwOJdwkWpy55wduyr4Dj2a1yRYFqvFlY/exec', {
+        method: 'POST',
+        contentType: 'application/json',
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(text => {
+        console.log(text);
+        // Можно добавить код для отображения сообщения об успешной отправке
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Можно добавить код для отображения сообщения об ошибке
+      });
+    });
+  </script>
+  
 </head>
 
 <body class="index-page">
