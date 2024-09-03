@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Index - OnePage Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
+  
   <!-- Favicons -->
   <link href="assets/img/face.jpg" rel="icon">
   <link href="assets/img/face.jpg" rel="face-icon">
-
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: OnePage
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var form = document.getElementById('contactForm');
@@ -45,16 +37,16 @@
           var data = {};
           formData.forEach((value, key) => { data[key] = value });
           
-          fetch('https://script.google.com/macros/s/AKfycbwI8uCiU5ZZ1N3WdjghgK4RzQnPr6uHVI9vCwOJdwkWpy55wduyr4Dj2a1yRYFqvFlY/exec', {
+          fetch('https://script.google.com/macros/s/AKfycbyzoaMBpUF9BS4EH5ex5C4fl2K79iXP1X-w9yEdZ5794gopnMT1fxKIBwA_VkYfhlbL/exec', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
           })
-          .then(response => response.text())
-          .then(text => {
-            console.log(text);
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
             document.querySelector('.sent-message').style.display = 'block';
           })
           .catch(error => {
@@ -68,7 +60,6 @@
     });
   </script>
   
-  
 </head>
 
 <body class="index-page">
@@ -77,8 +68,6 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Твоё приглашение</h1>
       </a>
 
@@ -95,93 +84,63 @@
   </header>
 
   <main class="main">
-
-
     <!-- About Section -->
     <section id="about" class="about section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Привет!<br></h2>
         <p>15 сентября мне исполнится 30 лет. Понимая, что это начало рабочей недели, я буду рада увидеть тебя на пикнике в пятницу 20.09.2023 в парке на границе Тель-Авива и Холона!</p>
-      </div><!-- End Section Title -->
-
+      </div>
       <div class="container">
-
         <div class="row gy-4">
-
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Я редко стала отмечать дни рождения с кем-то, как и видеться с людьми, но почему бы не внести в наши нерадостные времена немного праздника?
-            </p>
+            <p>Я редко стала отмечать дни рождения с кем-то, как и видеться с людьми, но почему бы не внести в наши нерадостные времена немного праздника?</p>
           </div>
-
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <p>Даже если мы не виделись давным-давно или встречались случайно на мероприятиях, если ты читаешь это, значит я буду рада обняться и разделить встречу нового десятка. </p>
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
-
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services section light-background">
-
       <div class="container">
-
         <div class="row gy-4">
-
           <div class="col-lg-12 col-md-12" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item item-teal position-relative">
-                <img src="./assets/img/new.JPG" alt="">
-                <br>
-                <p>Это я тебе благодарна за то, что страница вообще открыта и читается.</p>
+              <img src="./assets/img/new.JPG" alt="">
+              <br>
+              <p>Это я тебе благодарна за то, что страница вообще открыта и читается.</p>
             </div>
-        </div><!-- End Service Item -->
-        
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Services Section -->
-
+    </section>
 
     <!-- Faq Section -->
     <section id="faq" class="faq section light-background">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>А можно..? А если..? А что..?</h2>
         <p>Подарки, партнёры, собаки, время...</p>
-      </div><!-- End Section Title -->
-
+      </div>
       <div class="container">
-
         <div class="row justify-content-center">
-
           <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-
             <div class="faq-container">
-
               <div class="faq-item faq-active">
                 <h3>Могу я взять с собой...?</h3>
                 <div class="faq-content">
-                  <p>Да! Партнёра, ребёнка, собаку 	— только напиши об этом в форме ниже, пожалуйста.</p>
+                  <p>Да! Партнёра, ребёнка, собаку — только напиши об этом в форме ниже, пожалуйста.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
+              </div>
               <div class="faq-item">
                 <h3>Могу я приехать пораньше/попозже?</h3>
                 <div class="faq-content">
                   <p>Я планирую быть в парке с 11:30 до ... В худшем случае я уйду домой, куда можешь заглянуть и ты (дом рядом, мазган, диван и закуски я организую)</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
+              </div>
               <div class="faq-item">
                 <h3>"Я бы с радостью, но..."?</h3>
                 <div class="faq-content">
@@ -191,167 +150,80 @@
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Надо принести с собой еду, напитки?</h3>
-                <div class="faq-content">
-                  <p>Закуски будут, б/а напитки тоже, а вот алкоголь на тебе на твой вкус. Я не планирую шашлык, так как не умею его готовить и не хочу. Но если ты ужасно хочешь мяса, я готова купить мангал, угли и т.д., лишь бы не заниматься готовкой на огне.&#128035;</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>А что тебе дарить?</h3>
-                <div class="faq-content">
-                  <p>Своё присутствие и деньги &#128516; Я хочу купить макбук, обновить спортивное оборудование. Так что если очень хочется меня порадовать, то любая сумма поможет мне исполнить планы-желания.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <!-- <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div> -->
-
+              </div>
             </div>
-
-          </div><!-- End Faq Column-->
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Faq Section -->
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Карта и форма для тебя</h2>
-        <p>Пожалуйста, заполни анкету внизу, чтобы я знала о твоих аллергиях/пищевых предпочтениях и понимала, ждать ли тебя</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13529.62017075504!2d34.77293779223632!3d32.031226253413195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b35472a31c8b%3A0x31885e8b28e07cd4!2z16TXkNeo16cg16TXmdec15HXlden16E!5e0!3m2!1sen!2sil!4v1725390317125!5m2!1sen!2sil" width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div><!-- End Google Maps -->
-
+        <h2>Контакт</h2>
+        <p>Заполните форму ниже, чтобы я знала, кто придёт и в каком составе.</p>
+      </div>
+      <div class="container">
         <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Адрес</h3>
-                <p>Ha-Ma'apilim St 102, Holon</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Телефон</h3>
-                <p>+972584105011</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form id="contactForm">
+          <div class="col-lg-6">
+            <form id="contactForm" method="post">
               <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Как тебя зовут?" required>
+                <div class="col-md-12">
+                  <label for="name" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+                  <input type="text" id="name" name="name" class="form-control" required>
                 </div>
-                <div class="col-md-6">
-                  <select class="form-control" name="attendance" required>
-                    <option value="" disabled selected>Уверен ли ты, что придёшь?</option>
-                    <option value="yes">Точно да</option>
-                    <option value="not_sure">Пока не знаю</option>
+                <div class="col-md-12">
+                  <label for="attendance" class="form-label">Я буду: <span class="text-danger">*</span></label>
+                  <select id="attendance" name="attendance" class="form-select" required>
+                    <option value="" disabled selected>Выберите...</option>
+                    <option value="С удовольствием">С удовольствием</option>
+                    <option value="Скорее всего">Скорее всего</option>
+                    <option value="С сожалением сообщаю, что не смогу прийти">С сожалением сообщаю, что не смогу прийти</option>
                   </select>
                 </div>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="companions" placeholder="С кем ты будешь (партнёры, дети, животные)" required>
+                  <label for="companions" class="form-label">Вместе со мной придут (пожалуйста, укажите имена)</label>
+                  <input type="text" id="companions" name="companions" class="form-control">
                 </div>
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Твои предпочтения и ограничения по продуктам (кашрут, аллергии, вегетерианство)" required></textarea>
+                  <label for="message" class="form-label">Комментарий</label>
+                  <textarea id="message" name="message" class="form-control" rows="4"></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <div class="loading" style="display: none;">Loading...</div>
-                  <div class="error-message" style="display: none;">Произошла ошибка. Попробуйте еще раз.</div>
-                  <div class="sent-message" style="display: none;">Успешно отправлено! Спасибо</div>
-                  <button type="submit" class="btn btn-primary">Отправить форму</button>
+                  <button type="submit" class="btn btn-primary">Отправить</button>
                 </div>
               </div>
             </form>
-          </div><!-- End Contact Form -->
-          
+            <div class="sent-message" style="display:none;">Ваше сообщение было отправлено. Спасибо!</div>
+            <div class="error-message" style="display:none;">Произошла ошибка. Пожалуйста, попробуйте еще раз.</div>
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer light-background">
-
-    <div class="container footer-top">
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
       <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Ты супер!</span>
-          </a>
-          <p>Спасибо за помощь в планирование праздника!
-            <br>Ты можешь написать мне любые вопросы и сомнения,
-            <br>а также точный ответ, если пока сомневаешься в своём присутствии, в любом из ресурсов ниже.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.facebook.com/polagur"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/pola_gur/"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/pola-gur-38541a232/"><i class="bi bi-linkedin"></i></a>
+        <div class="col-lg-12 text-center">
+          <div class="credits">
+            Designed by <a href="#">Ваше Имя</a>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright отсутствует</span> <strong class="px-1 sitename">Ничего</strong> <span>и никак не защищено</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> (правда)
-      </div>
-    </div>
-
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  
 </body>
-
 </html>
