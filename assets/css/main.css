@@ -2056,3 +2056,22 @@ section,
     display: block; /* Убирает пробел под изображением */
     margin: 0 auto; /* Центрирование изображения по горизонтали */
 }
+
+.responsive-form {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Соотношение сторон 4:3, можно настроить под ваши нужды */
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-form iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
